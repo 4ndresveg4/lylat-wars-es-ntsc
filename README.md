@@ -55,3 +55,36 @@ Lylat wars 64 [Esp]_NTSC_60Hz.z64
 This repository contains no commercial ROMs, audio, graphics, or other game assets. Users must supply their own legally obtained ROM.
 
 See [`docs/technical-notes.md`](docs/technical-notes.md).
+## PAL → NTSC video correction
+
+Changing the Spanish PAL ROM to NTSC was not enough by itself.
+The game could run at 60 Hz, but the original PAL vertical configuration
+produced incorrect vertical scaling/positioning on NTSC output.
+
+### Before — incorrect vertical geometry
+
+| | | |
+|---|---|---|
+| ![](docs/images/stafoxfallo1.png) | ![](docs/images/stafoxfallo2.png) | ![](docs/images/stafoxfallo3.png) |
+
+### After — corrected NTSC output
+
+| | | |
+|---|---|---|
+| ![](docs/images/stafoxcrrecto1.png) | ![](docs/images/stafoxcrrecto2.png) | ![](docs/images/stafoxcrrecto3.png) |
+
+The final solution uses the tested `yScale = 0x4CD` configuration
+and recalculates the N64 ROM checksums.
+
+The resulting ROM preserves:
+
+- Spanish text
+- Spanish voices
+- NTSC 60 Hz operation
+- Corrected vertical geometry
+- Original gameplay speed
+
+The result was tested in Project64 and on real Nintendo 64 hardware
+using a Super 64 flash cartridge.
+
+
