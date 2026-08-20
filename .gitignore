@@ -1,0 +1,8 @@
+*.z64
+*.n64
+*.v64
+*.rom
+*.bin
+roms/
+__pycache__/
+*.pyc
