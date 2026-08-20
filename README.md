@@ -63,15 +63,15 @@ produced incorrect vertical scaling/positioning on NTSC output.
 
 ### Before — incorrect vertical geometry
 
-| | | |
+| Test 1 | Test 2 | Test 3 |
 |---|---|---|
-| ![](docs/images/stafoxfallo1.png) | ![](docs/images/stafoxfallo2.png) | ![](docs/images/stafoxfallo3.png) |
+| ![](docs/images/staefoxfallo1.png) | ![](docs/images/staefoxfallo2.png) | ![](docs/images/staefoxfallo3.png) |
 
 ### After — corrected NTSC output
 
-| | | |
+| Test 1 | Test 2 | Test 3 |
 |---|---|---|
-| ![](docs/images/stafoxcrrecto1.png) | ![](docs/images/stafoxcrrecto2.png) | ![](docs/images/stafoxcrrecto3.png) |
+| ![](docs/images/staefoxcrrecto1.png) | ![](docs/images/staefoxcrrecto2.png) | ![](docs/images/staefoxcrrecto3.png) |
 
 The final solution uses the tested `yScale = 0x4CD` configuration
 and recalculates the N64 ROM checksums.
